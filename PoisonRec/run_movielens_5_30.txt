@@ -1,0 +1,955 @@
+{'act_train_batch_size': 16, 'act_test_batch_size': 32, 'act_hidden_size': 32, 'act_epoch': 500, 'env_train_batch_size': 8, 'env_test_batch_size': 512, 'env_hidden_size': 32, 'env_epoch': 10, 'attack_type': 7, 'attack_name': ['none', 'random', 'popular'], 'data_set': 'movielens_modified_5_30', 'rec_type': 7, 'rec_name': ['ItemPop', 'CoVisitation', 'ItemKNN', 'PMF', 'BPR', 'NeuMF', 'AutoRec', 'GRU4Rec', 'NGCF'], 'attack_user_num': 20, 'attack_step': 20, 'is_pre_embedding': 0, 'action_num': 1000, 'tree_depth': 0, 'top_k': 5, 'is_A2DPA': 1}
+test args:  2_7_20_20
+load dataset:  movielens_modified_5_30
+5229 3377
+attack_user_num: :20, max_step: 20
+tree_depth:  13
+/home/mphelan/anaconda3/envs/fyp/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/mphelan/anaconda3/envs/fyp/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/mphelan/anaconda3/envs/fyp/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/mphelan/anaconda3/envs/fyp/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/mphelan/anaconda3/envs/fyp/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/mphelan/anaconda3/envs/fyp/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:From /home/mphelan/work/17349861_fyp/PoisonRec/actor2.py:100: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See tf.nn.softmax_cross_entropy_with_logits_v2.
+
+2021-04-19 11:42:33.859955: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2021-04-19 11:42:34.028206: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:81:00.0
+totalMemory: 10.92GiB freeMemory: 10.77GiB
+2021-04-19 11:42:34.028259: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 11:42:34.500568: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10430 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+user_count: 5229, item_count: 3377, get original/target_tree finished!
+2021-04-19 11:42:47.227864: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 11:42:47.228551: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10413 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+len(popular target unpopular): 338 8 3039
+split item set length:  [338, 338, 339, 337, 342, 336, 343, 349, 331, 324]
+epoch: 0
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+none attack
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 0
+train_env finished!
+begin is_test. time: 63.7653
+test id: 32/156717, hit num: 0, time: 63.8501
+test id: 26112/156717, hit num: 76, time: 436.5990
+test id: 52224/156717, hit num: 137, time: 807.7265
+test id: 78336/156717, hit num: 189, time: 1174.6943
+test id: 104448/156717, hit num: 261, time: 1544.4686
+test id: 130560/156717, hit num: 325, time: 1912.6348
+test id: 156672/156717, hit num: 391, time: 2284.3967
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 0 after poison, test score: 0.0000 hit num: 391
+2021-04-19 12:19:52.704577: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 12:19:52.709272: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+random attack
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 2289.4364
+test id: 32/156717, hit num: 0, time: 2289.8870
+test id: 26112/156717, hit num: 125, time: 2666.5219
+test id: 52224/156717, hit num: 247, time: 3039.3798
+test id: 78336/156717, hit num: 364, time: 3409.5267
+test id: 104448/156717, hit num: 498, time: 3780.4130
+test id: 130560/156717, hit num: 625, time: 4148.4796
+test id: 156672/156717, hit num: 745, time: 4521.1530
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 1 after poison, test score: 0.0000 hit num: 745
+2021-04-19 12:57:09.595631: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 12:57:09.596039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+popular attack
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 4526.3274
+test id: 32/156717, hit num: 0, time: 4526.4179
+test id: 26112/156717, hit num: 115, time: 4901.5221
+test id: 52224/156717, hit num: 247, time: 5274.1282
+test id: 78336/156717, hit num: 360, time: 5642.7780
+test id: 104448/156717, hit num: 489, time: 6012.9170
+test id: 130560/156717, hit num: 626, time: 6382.2257
+test id: 156672/156717, hit num: 725, time: 6755.5679
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 2 after poison, test score: 0.0000 hit num: 725
+baselines' rewards:  [391, 745, 725]
+===============user_count:  5249
+2021-04-19 13:34:29.056568: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 13:34:29.056927: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 6765.8526
+test id: 32/156717, hit num: 0, time: 6765.9366
+test id: 26112/156717, hit num: 130, time: 7141.4627
+test id: 52224/156717, hit num: 250, time: 7514.2198
+test id: 78336/156717, hit num: 363, time: 7882.9953
+test id: 104448/156717, hit num: 489, time: 8253.0874
+test id: 130560/156717, hit num: 609, time: 8621.3657
+test id: 156672/156717, hit num: 727, time: 8994.0748
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 1 after poison, test score: 0.0000 hit num: 727
+actor 0 finished. time: 8996.5201
+===============user_count:  5249
+2021-04-19 14:11:42.663001: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 14:11:42.663369: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 8999.4598
+test id: 32/156717, hit num: 0, time: 8999.5474
+test id: 26112/156717, hit num: 118, time: 9375.9081
+test id: 52224/156717, hit num: 250, time: 9748.9233
+test id: 78336/156717, hit num: 338, time: 10119.2815
+test id: 104448/156717, hit num: 451, time: 10491.0878
+test id: 130560/156717, hit num: 562, time: 10858.2109
+test id: 156672/156717, hit num: 677, time: 11229.6550
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 2 after poison, test score: 0.0000 hit num: 677
+actor 1 finished. time: 11232.0194
+===============user_count:  5249
+2021-04-19 14:48:58.108366: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 14:48:58.110660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 11234.8808
+test id: 32/156717, hit num: 0, time: 11234.9662
+test id: 26112/156717, hit num: 137, time: 11608.5711
+test id: 52224/156717, hit num: 268, time: 11980.8538
+test id: 78336/156717, hit num: 400, time: 12348.9438
+test id: 104448/156717, hit num: 523, time: 12718.8312
+test id: 130560/156717, hit num: 656, time: 13087.7946
+test id: 156672/156717, hit num: 799, time: 13460.6626
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 3 after poison, test score: 0.0000 hit num: 799
+actor 2 finished. time: 13463.0178
+===============user_count:  5249
+2021-04-19 15:26:09.078163: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 15:26:09.078526: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 13465.8408
+test id: 32/156717, hit num: 0, time: 13466.3078
+test id: 26112/156717, hit num: 110, time: 13840.5590
+test id: 52224/156717, hit num: 219, time: 14214.7376
+test id: 78336/156717, hit num: 318, time: 14585.5186
+test id: 104448/156717, hit num: 429, time: 14957.2509
+test id: 130560/156717, hit num: 552, time: 15327.7303
+test id: 156672/156717, hit num: 651, time: 15700.9524
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 4 after poison, test score: 0.0000 hit num: 651
+actor 3 finished. time: 15703.3066
+===============user_count:  5249
+2021-04-19 16:03:29.492694: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 16:03:29.493050: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 15706.3666
+test id: 32/156717, hit num: 0, time: 15706.4687
+test id: 26112/156717, hit num: 139, time: 16081.9866
+test id: 52224/156717, hit num: 252, time: 16453.0721
+test id: 78336/156717, hit num: 352, time: 16824.5933
+test id: 104448/156717, hit num: 477, time: 17195.5919
+test id: 130560/156717, hit num: 602, time: 17566.3334
+test id: 156672/156717, hit num: 730, time: 17937.5872
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 5 after poison, test score: 0.0000 hit num: 730
+actor 4 finished. time: 17940.0625
+===============user_count:  5249
+2021-04-19 16:40:46.127316: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 16:40:46.127676: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 17942.8813
+test id: 32/156717, hit num: 0, time: 17942.9669
+test id: 26112/156717, hit num: 150, time: 18317.7952
+test id: 52224/156717, hit num: 280, time: 18691.9398
+test id: 78336/156717, hit num: 398, time: 19062.4570
+test id: 104448/156717, hit num: 559, time: 19437.7582
+test id: 130560/156717, hit num: 705, time: 19811.2602
+test id: 156672/156717, hit num: 867, time: 20189.7217
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 6 after poison, test score: 0.0000 hit num: 867
+actor 5 finished. time: 20192.2571
+===============user_count:  5249
+2021-04-19 17:18:18.406093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 17:18:18.406449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 20195.1785
+test id: 32/156717, hit num: 0, time: 20195.2667
+test id: 26112/156717, hit num: 120, time: 20574.7113
+test id: 52224/156717, hit num: 237, time: 20955.4201
+test id: 78336/156717, hit num: 328, time: 21331.8042
+test id: 104448/156717, hit num: 461, time: 21709.1824
+test id: 130560/156717, hit num: 578, time: 22081.8582
+test id: 156672/156717, hit num: 695, time: 22462.7425
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 7 after poison, test score: 0.0000 hit num: 695
+actor 6 finished. time: 22465.1337
+===============user_count:  5249
+2021-04-19 17:56:11.256728: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 17:56:11.257078: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 22468.0388
+test id: 32/156717, hit num: 0, time: 22468.1363
+test id: 26112/156717, hit num: 124, time: 22847.5256
+test id: 52224/156717, hit num: 245, time: 23227.8187
+test id: 78336/156717, hit num: 393, time: 23604.6626
+test id: 104448/156717, hit num: 520, time: 23982.0100
+test id: 130560/156717, hit num: 650, time: 24356.9716
+test id: 156672/156717, hit num: 770, time: 24734.3659
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 8 after poison, test score: 0.0000 hit num: 770
+actor 7 finished. time: 24736.7930
+===============user_count:  5249
+2021-04-19 18:34:02.956112: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 18:34:02.956463: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 24739.7345
+test id: 32/156717, hit num: 0, time: 24739.8217
+test id: 26112/156717, hit num: 127, time: 25119.7664
+test id: 52224/156717, hit num: 254, time: 25494.4420
+test id: 78336/156717, hit num: 357, time: 25871.0529
+test id: 104448/156717, hit num: 468, time: 26247.8375
+test id: 130560/156717, hit num: 597, time: 26626.3953
+test id: 156672/156717, hit num: 725, time: 27003.1008
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 9 after poison, test score: 0.0000 hit num: 725
+actor 8 finished. time: 27005.7003
+===============user_count:  5249
+2021-04-19 19:11:51.998557: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 19:11:51.998996: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 27008.9028
+test id: 32/156717, hit num: 0, time: 27009.0043
+test id: 26112/156717, hit num: 127, time: 27389.7193
+test id: 52224/156717, hit num: 239, time: 27767.2876
+test id: 78336/156717, hit num: 331, time: 28142.9330
+test id: 104448/156717, hit num: 460, time: 28519.1548
+test id: 130560/156717, hit num: 578, time: 28894.3007
+test id: 156672/156717, hit num: 693, time: 29273.4452
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 10 after poison, test score: 0.0000 hit num: 693
+actor 9 finished. time: 29275.9242
+===============user_count:  5249
+2021-04-19 19:49:42.058257: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 19:49:42.058613: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 29278.8589
+test id: 32/156717, hit num: 0, time: 29278.9566
+test id: 26112/156717, hit num: 125, time: 29661.1354
+test id: 52224/156717, hit num: 253, time: 30041.2515
+test id: 78336/156717, hit num: 374, time: 30417.2700
+test id: 104448/156717, hit num: 512, time: 30795.2748
+test id: 130560/156717, hit num: 643, time: 31172.1549
+test id: 156672/156717, hit num: 800, time: 31553.5533
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 11 after poison, test score: 0.0000 hit num: 801
+actor 10 finished. time: 31555.9524
+===============user_count:  5249
+2021-04-19 20:27:42.006934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 20:27:42.008387: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 31558.8041
+test id: 32/156717, hit num: 0, time: 31558.8902
+test id: 26112/156717, hit num: 121, time: 31936.8664
+test id: 52224/156717, hit num: 236, time: 32318.4880
+test id: 78336/156717, hit num: 355, time: 32695.9564
+test id: 104448/156717, hit num: 468, time: 33073.6352
+test id: 130560/156717, hit num: 589, time: 33446.6573
+test id: 156672/156717, hit num: 712, time: 33823.9377
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 12 after poison, test score: 0.0000 hit num: 712
+actor 11 finished. time: 33826.3533
+===============user_count:  5249
+2021-04-19 21:05:32.531578: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 21:05:32.531934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 33829.3311
+test id: 32/156717, hit num: 0, time: 33829.4188
+test id: 26112/156717, hit num: 130, time: 34211.8552
+test id: 52224/156717, hit num: 270, time: 34590.9957
+test id: 78336/156717, hit num: 394, time: 34966.5558
+test id: 104448/156717, hit num: 549, time: 35343.2941
+test id: 130560/156717, hit num: 697, time: 35718.6082
+test id: 156672/156717, hit num: 834, time: 36094.2188
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 13 after poison, test score: 0.0000 hit num: 834
+actor 12 finished. time: 36096.5479
+===============user_count:  5249
+2021-04-19 21:43:22.611817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 21:43:22.612166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 36099.3733
+test id: 32/156717, hit num: 0, time: 36099.4630
+test id: 26112/156717, hit num: 128, time: 36482.4074
+test id: 52224/156717, hit num: 250, time: 36859.6208
+test id: 78336/156717, hit num: 346, time: 37236.8275
+test id: 104448/156717, hit num: 459, time: 37613.1356
+test id: 130560/156717, hit num: 571, time: 37990.3290
+test id: 156672/156717, hit num: 680, time: 38368.9130
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 14 after poison, test score: 0.0000 hit num: 680
+actor 13 finished. time: 38371.3655
+===============user_count:  5249
+2021-04-19 22:21:17.564208: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 22:21:17.564664: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 38374.3639
+test id: 32/156717, hit num: 0, time: 38374.4713
+test id: 26112/156717, hit num: 111, time: 38754.0154
+test id: 52224/156717, hit num: 230, time: 39133.4334
+test id: 78336/156717, hit num: 317, time: 39507.2396
+test id: 104448/156717, hit num: 454, time: 39885.3965
+test id: 130560/156717, hit num: 566, time: 40261.2848
+test id: 156672/156717, hit num: 688, time: 40639.0798
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 15 after poison, test score: 0.0000 hit num: 688
+actor 14 finished. time: 40641.4989
+===============user_count:  5249
+2021-04-19 22:59:07.670390: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 22:59:07.670755: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 40644.4931
+test id: 32/156717, hit num: 0, time: 40644.5844
+test id: 26112/156717, hit num: 150, time: 41028.0360
+test id: 52224/156717, hit num: 297, time: 41403.4645
+test id: 78336/156717, hit num: 437, time: 41778.1487
+test id: 104448/156717, hit num: 577, time: 42153.1703
+test id: 130560/156717, hit num: 739, time: 42522.5108
+test id: 156672/156717, hit num: 883, time: 42899.2954
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 16 after poison, test score: 0.0000 hit num: 883
+actor 15 finished. time: 42901.8141
+improved rewards: [336, 286, 408, 260, 339, 476, 304, 379, 334, 302, 410, 321, 443, 289, 297, 492]
+normd    rewards: -0.2708216627592814
+train i
+train i
+train i
+Epoch 0, none: 391, random: 745, popular: 725, ADPA soft reward: 354.8, max: 0, time: 42924.4
+epoch: 1
+baselines' rewards:  [0, 0, 0]
+===============user_count:  5249
+2021-04-19 23:37:11.702563: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-19 23:37:11.702916: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 42928.4860
+test id: 32/156717, hit num: 0, time: 42928.5763
+test id: 26112/156717, hit num: 152, time: 43303.7855
+test id: 52224/156717, hit num: 293, time: 43682.8834
+test id: 78336/156717, hit num: 422, time: 44057.9408
+test id: 104448/156717, hit num: 553, time: 44431.5634
+test id: 130560/156717, hit num: 682, time: 44805.2273
+test id: 156672/156717, hit num: 804, time: 45181.3816
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 1 after poison, test score: 0.0000 hit num: 805
+actor 0 finished. time: 45183.7845
+===============user_count:  5249
+2021-04-20 00:14:49.883561: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 00:14:49.883923: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 45186.6469
+test id: 32/156717, hit num: 0, time: 45186.7338
+test id: 26112/156717, hit num: 134, time: 45566.9111
+test id: 52224/156717, hit num: 253, time: 45945.1864
+test id: 78336/156717, hit num: 359, time: 46315.1438
+test id: 104448/156717, hit num: 493, time: 46689.7596
+test id: 130560/156717, hit num: 620, time: 47060.4723
+test id: 156672/156717, hit num: 757, time: 47440.2487
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 2 after poison, test score: 0.0000 hit num: 757
+actor 1 finished. time: 47442.7156
+===============user_count:  5249
+2021-04-20 00:52:28.816782: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 00:52:28.817137: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 47445.5866
+test id: 32/156717, hit num: 0, time: 47445.6831
+test id: 26112/156717, hit num: 144, time: 47826.4925
+test id: 52224/156717, hit num: 286, time: 48203.0492
+test id: 78336/156717, hit num: 418, time: 48577.6059
+test id: 104448/156717, hit num: 579, time: 48952.6445
+test id: 130560/156717, hit num: 720, time: 49327.8945
+test id: 156672/156717, hit num: 891, time: 49704.6694
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 3 after poison, test score: 0.0000 hit num: 891
+actor 2 finished. time: 49707.0656
+===============user_count:  5249
+2021-04-20 01:30:13.121096: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 01:30:13.128257: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 49709.9812
+test id: 32/156717, hit num: 0, time: 49710.0890
+test id: 26112/156717, hit num: 116, time: 50094.4885
+test id: 52224/156717, hit num: 246, time: 50469.5788
+test id: 78336/156717, hit num: 359, time: 50847.9623
+test id: 104448/156717, hit num: 494, time: 51226.7609
+test id: 130560/156717, hit num: 615, time: 51602.7901
+test id: 156672/156717, hit num: 745, time: 51983.8237
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 4 after poison, test score: 0.0000 hit num: 745
+actor 3 finished. time: 51986.1759
+===============user_count:  5249
+2021-04-20 02:08:12.305095: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 02:08:12.305449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 51989.0665
+test id: 32/156717, hit num: 0, time: 51989.1563
+test id: 26112/156717, hit num: 123, time: 52370.3548
+test id: 52224/156717, hit num: 248, time: 52748.2008
+test id: 78336/156717, hit num: 354, time: 53124.6057
+test id: 104448/156717, hit num: 477, time: 53499.4498
+test id: 130560/156717, hit num: 595, time: 53875.6621
+test id: 156672/156717, hit num: 716, time: 54251.7246
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 5 after poison, test score: 0.0000 hit num: 716
+actor 4 finished. time: 54254.1181
+===============user_count:  5249
+2021-04-20 02:46:00.179423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 02:46:00.182765: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 54256.9524
+test id: 32/156717, hit num: 0, time: 54257.0378
+test id: 26112/156717, hit num: 152, time: 54635.9709
+test id: 52224/156717, hit num: 306, time: 55006.9023
+test id: 78336/156717, hit num: 416, time: 55382.3229
+test id: 104448/156717, hit num: 577, time: 55757.1941
+test id: 130560/156717, hit num: 717, time: 56133.1885
+test id: 156672/156717, hit num: 856, time: 56513.4193
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 6 after poison, test score: 0.0000 hit num: 856
+actor 5 finished. time: 56515.8412
+===============user_count:  5249
+2021-04-20 03:23:41.919518: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 03:23:41.919867: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 56518.7207
+test id: 32/156717, hit num: 0, time: 56518.8097
+test id: 26112/156717, hit num: 128, time: 56899.7612
+test id: 52224/156717, hit num: 239, time: 57274.5004
+test id: 78336/156717, hit num: 345, time: 57649.5343
+test id: 104448/156717, hit num: 454, time: 58026.5727
+test id: 130560/156717, hit num: 582, time: 58396.6892
+test id: 156672/156717, hit num: 700, time: 58772.6067
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 7 after poison, test score: 0.0000 hit num: 701
+actor 6 finished. time: 58774.9735
+===============user_count:  5249
+2021-04-20 04:01:21.067827: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 04:01:21.068174: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 58777.8319
+test id: 32/156717, hit num: 0, time: 58777.9186
+test id: 26112/156717, hit num: 151, time: 59156.4136
+test id: 52224/156717, hit num: 292, time: 59534.9630
+test id: 78336/156717, hit num: 428, time: 59912.2030
+test id: 104448/156717, hit num: 597, time: 60291.2807
+test id: 130560/156717, hit num: 741, time: 60667.4558
+test id: 156672/156717, hit num: 913, time: 61035.6188
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 8 after poison, test score: 0.0000 hit num: 913
+actor 7 finished. time: 61037.9992
+===============user_count:  5249
+2021-04-20 04:39:04.132791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 04:39:04.135817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 61040.9108
+test id: 32/156717, hit num: 0, time: 61040.9983
+test id: 26112/156717, hit num: 98, time: 61420.0432
+test id: 52224/156717, hit num: 185, time: 61797.1401
+test id: 78336/156717, hit num: 276, time: 62172.1780
+test id: 104448/156717, hit num: 398, time: 62548.4638
+test id: 130560/156717, hit num: 498, time: 62923.0689
+test id: 156672/156717, hit num: 601, time: 63300.7710
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 9 after poison, test score: 0.0000 hit num: 601
+actor 8 finished. time: 63303.1439
+===============user_count:  5249
+2021-04-20 05:16:49.211869: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 05:16:49.213835: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 63305.9850
+test id: 32/156717, hit num: 0, time: 63306.0734
+test id: 26112/156717, hit num: 130, time: 63687.7647
+test id: 52224/156717, hit num: 267, time: 64065.9010
+test id: 78336/156717, hit num: 393, time: 64438.5016
+test id: 104448/156717, hit num: 527, time: 64813.5367
+test id: 130560/156717, hit num: 657, time: 65186.9562
+test id: 156672/156717, hit num: 784, time: 65565.0342
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 10 after poison, test score: 0.0000 hit num: 784
+actor 9 finished. time: 65567.4381
+===============user_count:  5249
+2021-04-20 05:54:33.497521: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 05:54:33.497874: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 65570.2618
+test id: 32/156717, hit num: 0, time: 65570.3482
+test id: 26112/156717, hit num: 128, time: 65949.2048
+test id: 52224/156717, hit num: 254, time: 66323.1957
+test id: 78336/156717, hit num: 347, time: 66696.4710
+test id: 104448/156717, hit num: 467, time: 67072.2205
+test id: 130560/156717, hit num: 596, time: 67442.7826
+test id: 156672/156717, hit num: 734, time: 67818.6097
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 11 after poison, test score: 0.0000 hit num: 735
+actor 10 finished. time: 67821.0772
+===============user_count:  5249
+2021-04-20 06:32:07.124402: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 06:32:07.124757: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 67823.8869
+test id: 32/156717, hit num: 0, time: 67823.9733
+test id: 26112/156717, hit num: 126, time: 68205.7449
+test id: 52224/156717, hit num: 243, time: 68581.7393
+test id: 78336/156717, hit num: 358, time: 68957.4780
+test id: 104448/156717, hit num: 487, time: 69330.6248
+test id: 130560/156717, hit num: 615, time: 69708.3747
+test id: 156672/156717, hit num: 739, time: 70085.9809
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 12 after poison, test score: 0.0000 hit num: 739
+actor 11 finished. time: 70088.4090
+===============user_count:  5249
+2021-04-20 07:09:54.467054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 07:09:54.467417: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 70091.2272
+test id: 32/156717, hit num: 0, time: 70091.3143
+test id: 26112/156717, hit num: 131, time: 70470.8406
+test id: 52224/156717, hit num: 271, time: 70845.9739
+test id: 78336/156717, hit num: 377, time: 71225.5815
+test id: 104448/156717, hit num: 504, time: 71602.0452
+test id: 130560/156717, hit num: 615, time: 71977.4485
+test id: 156672/156717, hit num: 728, time: 72354.4178
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 13 after poison, test score: 0.0000 hit num: 728
+actor 12 finished. time: 72356.8116
+===============user_count:  5249
+2021-04-20 07:47:42.974436: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 07:47:42.974818: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 72359.7643
+test id: 32/156717, hit num: 0, time: 72359.8523
+test id: 26112/156717, hit num: 114, time: 72741.1321
+test id: 52224/156717, hit num: 236, time: 73115.0747
+test id: 78336/156717, hit num: 345, time: 73492.1968
+test id: 104448/156717, hit num: 458, time: 73878.6838
+test id: 130560/156717, hit num: 581, time: 74249.6027
+test id: 156672/156717, hit num: 696, time: 74628.9003
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 14 after poison, test score: 0.0000 hit num: 696
+actor 13 finished. time: 74631.3797
+===============user_count:  5249
+2021-04-20 08:25:37.560322: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 08:25:37.560696: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 74634.4123
+test id: 32/156717, hit num: 0, time: 74634.5007
+test id: 26112/156717, hit num: 123, time: 75016.9829
+test id: 52224/156717, hit num: 234, time: 75394.0163
+test id: 78336/156717, hit num: 339, time: 75767.4001
+test id: 104448/156717, hit num: 459, time: 76142.1777
+test id: 130560/156717, hit num: 569, time: 76515.3872
+test id: 156672/156717, hit num: 681, time: 76890.4706
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 15 after poison, test score: 0.0000 hit num: 681
+actor 14 finished. time: 76892.9755
+===============user_count:  5249
+2021-04-20 09:03:19.079350: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 09:03:19.079711: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 76895.8694
+test id: 32/156717, hit num: 0, time: 76895.9572
+test id: 26112/156717, hit num: 117, time: 77276.8182
+test id: 52224/156717, hit num: 216, time: 77652.3645
+test id: 78336/156717, hit num: 337, time: 78025.9481
+test id: 104448/156717, hit num: 459, time: 78402.8783
+test id: 130560/156717, hit num: 568, time: 78776.2668
+test id: 156672/156717, hit num: 699, time: 79151.0206
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 16 after poison, test score: 0.0000 hit num: 699
+actor 15 finished. time: 79153.4007
+improved rewards: [805, 757, 891, 745, 716, 856, 701, 913, 601, 784, 735, 739, 728, 696, 681, 699]
+normd    rewards: 0.6629713855741366
+train i
+train i
+train i
+Epoch 1, none: 0, random: 0, popular: 0, ADPA soft reward: 752.9, max: 0, time: 79154.3
+epoch: 2
+baselines' rewards:  [0, 0, 0]
+===============user_count:  5249
+2021-04-20 09:41:01.679269: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 09:41:01.679669: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 79158.4967
+test id: 32/156717, hit num: 0, time: 79158.5826
+test id: 26112/156717, hit num: 146, time: 79537.1840
+test id: 52224/156717, hit num: 279, time: 79910.4683
+test id: 78336/156717, hit num: 403, time: 80286.1628
+test id: 104448/156717, hit num: 565, time: 80659.0542
+test id: 130560/156717, hit num: 705, time: 81034.0792
+test id: 156672/156717, hit num: 850, time: 81414.5205
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 1 after poison, test score: 0.0000 hit num: 850
+actor 0 finished. time: 81417.0699
+===============user_count:  5249
+2021-04-20 10:18:43.135922: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 10:18:43.136280: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 81419.9807
+test id: 32/156717, hit num: 0, time: 81420.0692
+test id: 26112/156717, hit num: 140, time: 81800.1872
+test id: 52224/156717, hit num: 256, time: 82182.0330
+test id: 78336/156717, hit num: 360, time: 82556.0718
+test id: 104448/156717, hit num: 491, time: 82987.0292
+test id: 130560/156717, hit num: 619, time: 83529.1082
+test id: 156672/156717, hit num: 743, time: 83938.5829
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 2 after poison, test score: 0.0000 hit num: 743
+actor 1 finished. time: 83941.0665
+===============user_count:  5249
+2021-04-20 11:00:47.210754: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 11:00:47.211131: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 83944.0290
+test id: 32/156717, hit num: 0, time: 83944.1310
+test id: 26112/156717, hit num: 126, time: 84322.1549
+test id: 52224/156717, hit num: 234, time: 84700.3346
+test id: 78336/156717, hit num: 345, time: 85073.5622
+test id: 104448/156717, hit num: 487, time: 85444.7469
+test id: 130560/156717, hit num: 607, time: 85814.2755
+test id: 156672/156717, hit num: 722, time: 86194.1424
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 3 after poison, test score: 0.0000 hit num: 722
+actor 2 finished. time: 86196.6181
+===============user_count:  5249
+2021-04-20 11:38:22.700940: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 11:38:22.701314: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 86199.5082
+test id: 32/156717, hit num: 0, time: 86199.5941
+test id: 26112/156717, hit num: 129, time: 86577.9176
+test id: 52224/156717, hit num: 250, time: 86952.1019
+test id: 78336/156717, hit num: 377, time: 87325.0254
+test id: 104448/156717, hit num: 506, time: 87701.9670
+test id: 130560/156717, hit num: 633, time: 88072.3389
+test id: 156672/156717, hit num: 756, time: 88443.9647
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 4 after poison, test score: 0.0000 hit num: 756
+actor 3 finished. time: 88446.4101
+===============user_count:  5249
+2021-04-20 12:15:52.596214: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 12:15:52.596579: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 88449.4221
+test id: 32/156717, hit num: 0, time: 88449.5111
+test id: 26112/156717, hit num: 118, time: 88829.7029
+test id: 52224/156717, hit num: 228, time: 89203.3369
+test id: 78336/156717, hit num: 325, time: 89576.9303
+test id: 104448/156717, hit num: 441, time: 89948.1043
+test id: 130560/156717, hit num: 565, time: 90319.8897
+test id: 156672/156717, hit num: 696, time: 90695.9301
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 5 after poison, test score: 0.0000 hit num: 696
+actor 4 finished. time: 90698.3178
+===============user_count:  5249
+2021-04-20 12:53:24.399047: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 12:53:24.399411: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 90701.1926
+test id: 32/156717, hit num: 0, time: 90701.2936
+test id: 26112/156717, hit num: 139, time: 91082.4318
+test id: 52224/156717, hit num: 278, time: 91457.7818
+test id: 78336/156717, hit num: 388, time: 91832.1028
+test id: 104448/156717, hit num: 510, time: 92205.4311
+test id: 130560/156717, hit num: 635, time: 92575.8380
+test id: 156672/156717, hit num: 756, time: 92952.4311
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 6 after poison, test score: 0.0000 hit num: 756
+actor 5 finished. time: 92954.7604
+===============user_count:  5249
+2021-04-20 13:31:00.838612: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 13:31:00.839045: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 92957.6169
+test id: 32/156717, hit num: 0, time: 92957.7123
+test id: 26112/156717, hit num: 127, time: 93334.3873
+test id: 52224/156717, hit num: 256, time: 93707.7389
+test id: 78336/156717, hit num: 373, time: 94083.6045
+test id: 104448/156717, hit num: 503, time: 94459.2794
+test id: 130560/156717, hit num: 626, time: 94832.1825
+test id: 156672/156717, hit num: 746, time: 95208.7829
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 7 after poison, test score: 0.0000 hit num: 747
+actor 6 finished. time: 95211.2501
+===============user_count:  5249
+2021-04-20 14:08:37.308667: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 14:08:37.309734: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 95214.0954
+test id: 32/156717, hit num: 0, time: 95214.1867
+test id: 26112/156717, hit num: 120, time: 95589.3007
+test id: 52224/156717, hit num: 215, time: 95961.5373
+test id: 78336/156717, hit num: 320, time: 96337.5475
+test id: 104448/156717, hit num: 457, time: 96710.0291
+test id: 130560/156717, hit num: 573, time: 97085.3488
+test id: 156672/156717, hit num: 675, time: 97464.7419
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 8 after poison, test score: 0.0000 hit num: 676
+actor 7 finished. time: 97467.1967
+===============user_count:  5249
+2021-04-20 14:46:13.530029: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 14:46:13.530469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 97470.4281
+test id: 32/156717, hit num: 0, time: 97470.5314
+test id: 26112/156717, hit num: 143, time: 97846.8804
+test id: 52224/156717, hit num: 276, time: 98221.1150
+test id: 78336/156717, hit num: 407, time: 98594.5164
+test id: 104448/156717, hit num: 548, time: 98973.8996
+test id: 130560/156717, hit num: 701, time: 99343.3243
+test id: 156672/156717, hit num: 833, time: 99720.0605
+input_time: 0.0000 0.0000 0.0000
+top_ks[:10]:  [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+sample_order 9 after poison, test score: 0.0000 hit num: 833
+actor 8 finished. time: 99722.4632
+===============user_count:  5249
+2021-04-20 15:23:49.018214: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2021-04-20 15:23:49.018589: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2425 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:81:00.0, compute capability: 6.1)
+Env is restore from:  2_7_50_env/ckpt
+fine-tune env_epoch:  1
+number of the train poisoning data: 380
+train_env finished!
+begin is_test. time: 99725.8285
+test id: 32/156717, hit num: 0, time: 99725.9171
+test id: 26112/156717, hit num: 120, time: 100103.2257
+test id: 52224/156717, hit num: 228, time: 100480.7291
